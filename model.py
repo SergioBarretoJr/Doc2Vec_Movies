@@ -24,11 +24,7 @@ def read_dataset(path):
     return x_train, x_test, y_train, y_test, all_data
 
 def label_sentences(corpus, label_type):
-    """
-    Gensim's Doc2Vec implementation requires each document/paragraph to have a label associated with it.
-    We do this by using the LabeledSentence method. The format will be "TRAIN_i" or "TEST_i" where "i" is
-    a dummy index of the review.
-    """
+    
     labeled = []
     for i, v in enumerate(corpus):
         label = label_type + '_' + str(i)
